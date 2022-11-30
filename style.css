@@ -1,0 +1,278 @@
+/* FONT POPPINS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*, *::after, *::before {
+    /*box-shadow: 0px 0px 0px 2px #00FF;/**/
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-height: 80px;
+    --page-width   : 60vw;
+}
+
+body {
+    margin : 0px;
+    padding: 0px;
+}
+
+    body > div.header,
+    body > div.main,
+    body > div.footer {
+        width : 100vw;
+        margin: 0px;
+    }
+
+    body > div.header { height: var(--header-height); }
+    body > div.footer { height: 120px; }
+    body > div.main {
+        /* ensure the main body always pushes the footer down */
+        height: calc(100vh - 80px - 120px);
+    }
+
+    body > div.main > div.turtle {
+        /* set the turtle image */
+        background-image   : url('/projimgs/turtle.png');
+        background-size    : cover;
+        background-position: right;
+        background-size    : cover;
+        /* put the turtle in the corner */
+        position           : absolute;
+        left               : 0px;
+        top                : 160px;
+        /* absolute size ensures the background is in the right place */
+        height             : 320px;
+        width              : 170px;
+    }
+
+    body > div.header {
+        /* center everything in the header */
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+    }
+
+        body > div.header > div.closeButtonWrapper {
+            /* size */
+            width              : 40px; 
+            height             : var(--header-height);
+            /* content */
+            background-image   : url('/projimgs/closebtn.png');
+            background-size    : contain;
+            background-position: center;
+            background-repeat  : no-repeat;
+            /* hover animation */
+            transition         : ease-in-out 100ms;
+            transform          : scale(0.8);
+            /* make it look clickable */
+            cursor             : pointer;
+            /* put it in the corner */
+            position           : absolute;
+            top                : 0px;
+            left               : 0px;
+            margin-left        : 20px;
+        }
+        body > div.header > div.closeButtonWrapper:hover {
+            /* bigger on mouseover */
+            transform: scale(1.0);
+        }
+
+        body > div.header > div.ProgressBar {
+            height          : 12px;
+            width           : var(--page-width);
+            background-color: rgb(81, 81, 101);
+            margin          : auto;
+            border-radius   : 6px;
+        }
+            body > div.header > div.ProgressBar > div.fill {
+                transition      : ease-in-out 400ms;
+                height          : 100%;
+                background-color: green;
+                width           : 0%;
+                border-radius   : 6px 0px 0px 6px;
+            }
+
+    body > div.main > div.content {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        flex-direction : column;
+    }
+
+    body > div.main > div.content > div.questionWrapper {
+        width      : 700px;
+        height     : auto; /* another one here */
+        font-size  : 35px;
+        font-weight: 600;
+        color:rgb(48, 85, 48);
+    }
+
+    body > div.main > div.content > div.AnswerButtonWrapper {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        width          : 500px;
+        height         : auto;
+        top            : 300px;
+        align-content  : center;
+        flex-wrap      : wrap;
+    }
+
+        body > div.main > div.content > div.AnswerButtonWrapper > button {
+            width        : 40%;
+            height       : 60px;
+            border-radius: 15px;
+            border       : solid 3px #568360;
+            margin       : 10px;
+            background-color: #4E6B55;
+            font-weight: 400;
+            font-size: large;
+            color: white;
+            cursor: pointer;
+        }
+        body > div.main > div.content > div.AnswerButtonWrapper > button:hover {
+            background-color: #2f3f33;
+        }
+
+    body > div.footer {
+        display        : flex;
+        align-items    : flex-end;
+        justify-content: right;
+    }
+
+        body > div.footer > b {
+            margin-right: 20px;
+        }
+
+/* ==== MODAL PART ===== */
+    #modal {
+        /* this is the background */
+        z-index: 10;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        --modal-width: 400px;
+        --modal-height: 350px;
+        /* Animation */
+        transition: cubic-bezier(0, 0.53, 0.58, 1) 500ms;
+        opacity: 1;
+        backdrop-filter: blur(5px);
+        /* idea */
+        transform: translateY(0px);
+    }
+        #modal.closed {
+            opacity: 0;
+        }
+            #modal.closed > div.content {
+                transform: translateY(-600px); 
+            }
+    /*#modal, #modal * {
+        box-shadow: 0px 0px 0px 3px rgba(0,0,255,1);
+    }
+    #modal, #modal div {
+        box-shadow: 0px 0px 0px 3px rgba(255,0,0,1);
+    }*/
+        #modal > div.content {
+            transition: cubic-bezier(0, 0.53, 0.58, 1) 500ms;
+            width: var(--modal-width);
+            height: var(--modal-height);
+            border-radius: 10px;
+            border: 3px solid #568360;
+            background: #4E6B55AA;
+            box-sizing: revert;
+        }
+            #modal > div.content::before {
+                content: "";
+                position: absolute;
+                width: var(--modal-width);
+                height: var(--modal-height);
+                z-index: -1;
+                background: url(/projImgs/atomi.png);
+                background-position: center;
+                background-color: #4E6B55;
+                border-radius: 10px;
+                background-repeat: no-repeat;
+            }
+            #modal > div.content > div.mainModal > div.stars {
+                display: flex;
+                justify-content: space-around;
+            }
+                #modal > div.content > div.mainModal > div.stars > img {
+                    width: calc(var(--modal-width) / 5 * 0.8);
+                }
+        #modal > div.content > div.headerModal {
+            height: 50px;
+            text-align: center;
+            top: 0;
+        }
+            #modal > div.content > div.headerModal > h1 {
+                color: #fff;
+            }
+            #modal > div.content > div.mainModal {
+                color: #ffff;
+                text-align: center;
+            }
+                #modal > div.content > div.mainModal > h3 {
+                    font-weight: 400;
+                    font-size: 20px;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+            #modal > div.content > div.footerModal {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100px;
+            }
+                #modal > div.content > div.footerModal > button {
+                    width: 150px;
+                    height: 50px;
+                    border-radius: 10px;
+                    font-weight: 500;
+                    font-size: large;
+                    color: yellow;
+                    background-color: rgba(255,255,255,0.7);
+                    border: 1px solid rgba(255,255,255,0.5);
+                    backdrop-filter: blur(4px);
+                    transition: all ease-out 100ms;
+                    cursor: pointer;
+                }
+                #modal > div.content > div.footerModal > button:hover {
+                    background-color: rgba(255,255,255,0.4);
+                }
+/* RESPONSIVE THINGY */
+
+                @media (max-width: 870px) {
+
+                    body > div.main > div.content > div.AnswerButtonWrapper {
+                        width: 90vw;
+                    }
+                    #modal > div.content {
+                        width: 90vw;
+                    }
+                    #modal > div.content::before {
+                        width: 90vw; 
+                    }
+
+                    body > div.main > div.content {
+                        height: 100%;
+                    }
+
+                    body > div.main > div.turtle {
+                        top: 500px;
+                        height: 260px;
+                        width: 145px;
+                    }
+
+                    body > div.main > div.content > div.AnswerButtonWrapper > button {
+                        z-index: 1; /* solve later - media query height screen */
+                    }
+                    body > div.main > div.content > div.questionWrapper {
+                        width: 90vw; 
+                    }
+                } 

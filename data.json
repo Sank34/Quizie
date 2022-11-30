@@ -1,0 +1,39 @@
+{
+    "questions": [
+      {
+        "text": "Cum se numeşte cel mai înalt vârf din Munţii Carpaţi din Romania?", 
+        "correct_answer": "Pietrosu", 
+        "wrong_answers": [
+          "Bucegi", "Gerlachovský", "Omu"
+        ] 
+      },
+      {
+        "text": "Care este T(temperatura) calculată în grade K la altitudinea de 2500m altitudine,de la suprafaţa solului unde temperatura este de 20 °C?(ştiind că la fiecare 1000m altitudine T(temperatura) scade cu 6 °C)", 
+        "correct_answer": "278,15K", 
+        "wrong_answers": [
+          "5 °C ", "298,15K", "291K"
+        ] 
+      },
+      {
+        "text": "Pe câte state se desfăşoară Munţii Carpaţi?", 
+        "correct_answer": "7 state", 
+        "wrong_answers": [
+          "5 state ", "2 state", "9 state"
+        ] 
+      },
+      {
+        "text": "Vf. Gerlachovský cel mai înalt din Europa (2655m) şi Vf.Moldoveanu cel mai înalt dinRomânia(2544m);care este diferenţa de înălîime dintre aceştia?", 
+        "correct_answer": "111m", 
+        "wrong_answers": [
+          "100m ", "200m", "90m"
+        ] 
+      },
+      {
+        "text": "Cum se numeşte cel mai înalt vârf din Carpaţii Europeni?", 
+        "correct_answer": "Gerlachovský(Slovacia) ", 
+        "wrong_answers": [
+          "Vf.Hovârla(Ucraina)", "Vf.Rysy(Polonia)", "Vf. Kékes(Ungaria)"
+        ] 
+      }
+    ]
+  }
