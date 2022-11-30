@@ -116,7 +116,7 @@ body {
         height         : auto;
         top            : 300px;
         align-content  : center;
-        flex-wrap      : wrap;
+        flex-wrap      : wrap; 
     }
 
         body > div.main > div.content > div.AnswerButtonWrapper > button {
