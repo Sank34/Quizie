@@ -136,6 +136,7 @@ addEventListener('DOMContentLoaded', (e) => {
 //startup
 var btn_modal_clicked = function () { }
 var questions;
+var answer_has_been_decremented = false;
 
 function startup() {
     //Gather the questions
@@ -166,12 +167,13 @@ function load_question(qst) {
     let wrongAnsw2 = qst.wrong_answers[1]
     let wrongAnsw3 = qst.wrong_answers[2]
     let answers = [
-        { text: correctAnsw, click: (e) => { checkanswers(true,  currentquestion, e); } }, 
-        { text:wrongAnsw1,   click: (e) => { checkanswers(false, currentquestion, e); } } , 
-        { text:wrongAnsw2,   click: (e) => { checkanswers(false, currentquestion, e); } } ,  
-        { text:wrongAnsw3,   click: (e) => { checkanswers(false, currentquestion, e); } } , 
+        { text: correctAnsw, click: () => { checkanswers(true,  currentquestion); } }, 
+        { text:wrongAnsw1,   click: () => { checkanswers(false, currentquestion); } } , 
+        { text:wrongAnsw2,   click: () => { checkanswers(false, currentquestion); } } ,  
+        { text:wrongAnsw3,   click: () => { checkanswers(false, currentquestion); } } , 
     ];
     answers = shuffle(answers)
+    answer_has_been_decremented = false;
     for (let i = 0; i < btns.length; i++) {
         btns[i].setAttribute('data-clicked', 'false');
         btns[i].innerText = answers[i].text;
@@ -201,10 +203,6 @@ function shuffle(array) {
 let correctanswers = 5;
 //check answers function
 function checkanswers(correct, index, e) {
-    let already_pressed = e.target.getAttribute('data-clicked') == 'true';
-    if (!already_pressed) {
-        e.target.setAttribute('data-clicked', 'true');
-    }
     if (correct == true && index == questions.length - 1) {
         // correct answer, and final answer 
         /*open_modal(
@@ -273,8 +271,9 @@ function checkanswers(correct, index, e) {
             "Try again"
         );
         //decrement the x variable
-        if (!already_pressed) {
+        if (!answer_has_been_decremented) {
             correctanswers -= 1;
         }
+        answer_has_been_decremented = true;
     }
 }
