@@ -99,9 +99,8 @@ addEventListener('DOMContentLoaded', (e) => {
     let audio = new Audio('/audios/fancyclick.wav')
     let buttons = document.querySelectorAll('div.main div.content div.AnswerButtonWrapper button');
     for (button of buttons) {
-        button.addEventListener('click', () => {
-            audio.play(); 
-            checkanswers()
+        button.addEventListener('click', (e) => {
+            audio.play();
         });
     }
     //close btn sound effect
@@ -157,30 +156,27 @@ function startup() {
 
 function load_question(qst) {
     //Gather the questions
-        //Put the data onto the webpage.
-        let qText = document.querySelector('body > div.main > div.content > div.questionWrapper > p')
-        qText.innerText = qst.text
-        let btns = document.querySelectorAll('body > div.main > div.content > div.AnswerButtonWrapper > button')
-        let random = Math.floor(Math.random() * 4)
-        let correctAnsw = qst.correct_answer
-        let wrongAnsw1 = qst.wrong_answers[0]
-        let wrongAnsw2 = qst.wrong_answers[1]
-        let wrongAnsw3 = qst.wrong_answers[2]
-        let answers = [
-            { text: correctAnsw, click: () => { checkanswers(true,  currentquestion); } }, 
-            { text:wrongAnsw1,   click: () => { checkanswers(false, currentquestion); }} , 
-            { text:wrongAnsw2,   click: () => { checkanswers(false, currentquestion); }} ,  
-            { text:wrongAnsw3,   click: () => { checkanswers(false, currentquestion); }} , 
-        ];
-        answers = shuffle(answers)
-        btns[0].innerText = answers[0].text;
-        btns[0].onclick = answers[0].click;
-        btns[1].innerText = answers[1].text;
-        btns[1].onclick = answers[1].click;
-        btns[2].innerText = answers[2].text;
-        btns[2].onclick = answers[2].click;
-        btns[3].innerText = answers[3].text;
-        btns[3].onclick = answers[3].click;
+    //Put the data onto the webpage.
+    let qText = document.querySelector('body > div.main > div.content > div.questionWrapper > p')
+    qText.innerText = qst.text
+    let btns = document.querySelectorAll('body > div.main > div.content > div.AnswerButtonWrapper > button')
+    let random = Math.floor(Math.random() * 4)
+    let correctAnsw = qst.correct_answer
+    let wrongAnsw1 = qst.wrong_answers[0]
+    let wrongAnsw2 = qst.wrong_answers[1]
+    let wrongAnsw3 = qst.wrong_answers[2]
+    let answers = [
+        { text: correctAnsw, click: (e) => { checkanswers(true,  currentquestion, e); } }, 
+        { text:wrongAnsw1,   click: (e) => { checkanswers(false, currentquestion, e); } } , 
+        { text:wrongAnsw2,   click: (e) => { checkanswers(false, currentquestion, e); } } ,  
+        { text:wrongAnsw3,   click: (e) => { checkanswers(false, currentquestion, e); } } , 
+    ];
+    answers = shuffle(answers)
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].setAttribute('data-clicked', 'false');
+        btns[i].innerText = answers[i].text;
+        btns[i].onclick = (e) => answers[i].click(e);
+    }
 }
 
 //shufle arrays function
@@ -204,7 +200,11 @@ function shuffle(array) {
 //condition for text limit
 let correctanswers = 5;
 //check answers function
-function checkanswers(correct, index) {
+function checkanswers(correct, index, e) {
+    let already_pressed = e.target.getAttribute('data-clicked') == 'true';
+    if (!already_pressed) {
+        e.target.setAttribute('data-clicked', 'true');
+    }
     if (correct == true && index == questions.length - 1) {
         // correct answer, and final answer 
         /*open_modal(
@@ -273,6 +273,8 @@ function checkanswers(correct, index) {
             "Try again"
         );
         //decrement the x variable
-        correctanswers -= 1;
+        if (!already_pressed) {
+            correctanswers -= 1;
+        }
     }
 }
