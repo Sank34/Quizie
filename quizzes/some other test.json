@@ -1,0 +1,13 @@
+{
+  "questions": [
+    {
+      "text": "What color is grass?",
+      "correct_answer": "Green",
+      "wrong_answers": [
+        "Blue",
+        "Purple",
+        "Red"
+      ]
+    }
+  ]
+}

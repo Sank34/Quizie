@@ -4,6 +4,20 @@
     -responsive phone bug with the text
 */
 
+// get the quiz selection, or default if not specified
+var quiz_uri = '/quizzes/' + (getParameterByName("quiz") ?? "default").trim() + '.json';
+
+// getting querystring parameters
+// copied from stackoverflow.com/a/901144
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
 // bar fill percentage variable
 function setProgress(percentage) {
     document.getElementById("progress").style.width = `${percentage}%`;
@@ -75,15 +89,13 @@ function switch_question() {
     */ 
     let question_text = document.querySelector("body > div.main > div.content > div.questionWrapper > p")
     let button = document.getElementById("switch")
-        $.get('data.json', function(data) {
+        $.get(quiz_uri, function(data) {
             questions = data.questions
             // increment currentquestion
             currentquestion += 1; 
             let question = questions[currentquestion]; 
             load_question(question); //load it on the webpage 
         })
-    
- 
 }
 
 // wait for page to be ready
@@ -140,7 +152,7 @@ var answer_has_been_decremented = false;
 
 function startup() {
     //Gather the questions
-    $.get('data.json', function (data) {
+    $.get(quiz_uri, function (data) {
         questions = data.questions
         //Grab data from the first question
         let q1 = questions[0]
