@@ -1,38 +1,38 @@
 {
     "questions": [
       {
-        "text": "Cum se numeşte cel mai înalt vârf din Munţii Carpaţi din Romania?", 
-        "correct_answer": "Pietrosu", 
+        "text": "In ce grupa se afla elementul Ca?", 
+        "correct_answer": "II", 
         "wrong_answers": [
-          "Bucegi", "Gerlachovský", "Omu"
+          "IV", "III", "I"
         ] 
       },
       {
-        "text": "Care este T(temperatura) calculată în grade K la altitudinea de 2500m altitudine,de la suprafaţa solului unde temperatura este de 20 °C?(ştiind că la fiecare 1000m altitudine T(temperatura) scade cu 6 °C)", 
-        "correct_answer": "278,15K", 
+        "text": "In reactia 2H2O --> 2OH + H2^ reactantul este...", 
+        "correct_answer": "H2O", 
         "wrong_answers": [
-          "5 °C ", "298,15K", "291K"
+          "OH + H2", "H2", "OH"
         ] 
       },
       {
-        "text": "Pe câte state se desfăşoară Munţii Carpaţi?", 
-        "correct_answer": "7 state", 
+        "text": "Calculati C% daca md = 30g, iar ms = 60g", 
+        "correct_answer": "C = 50%", 
         "wrong_answers": [
-          "5 state ", "2 state", "9 state"
+          "C = 10% ", "C = 100%", "C = 0%"
         ] 
       },
       {
-        "text": "Vf. Gerlachovský cel mai înalt din Europa (2655m) şi Vf.Moldoveanu cel mai înalt dinRomânia(2544m);care este diferenţa de înălîime dintre aceştia?", 
-        "correct_answer": "111m", 
+        "text": "Ce rezulta din reactia K + H2O?", 
+        "correct_answer": "KHO + O2", 
         "wrong_answers": [
-          "100m ", "200m", "90m"
+          "HK + O2 ", "KO + H2", "KH2O + K"
         ] 
       },
       {
-        "text": "Cum se numeşte cel mai înalt vârf din Carpaţii Europeni?", 
-        "correct_answer": "Gerlachovský(Slovacia) ", 
+        "text": "Care este formula volumului unei substante", 
+        "correct_answer": "V = Nv * Vo ", 
         "wrong_answers": [
-          "Vf.Hovârla(Ucraina)", "Vf.Rysy(Polonia)", "Vf. Kékes(Ungaria)"
+          "V = m * Nv", "V = Vo * m", "V = Vo : m"
         ] 
       }
     ]
