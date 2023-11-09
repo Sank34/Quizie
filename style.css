@@ -33,7 +33,7 @@ body {
 
     body > div.main > div.turtle {
         /* set the turtle image */
-        background-image   : url('/projimgs/turtle.png');
+        background-image   : url('projimgs/turtle.png');
         background-size    : cover;
         background-position: right;
         background-size    : cover;
@@ -58,7 +58,7 @@ body {
             width              : 40px; 
             height             : var(--header-height);
             /* content */
-            background-image   : url('/projimgs/closebtn.png');
+            background-image   : url('projimgs/closebtn.png');
             background-size    : contain;
             background-position: center;
             background-repeat  : no-repeat;
@@ -192,7 +192,7 @@ body {
                 width: var(--modal-width);
                 height: var(--modal-height);
                 z-index: -1;
-                background: url(/projImgs/atomi.png);
+                background: url(projImgs/atomi.png);
                 background-position: center;
                 background-color: #4E6B55;
                 border-radius: 10px;

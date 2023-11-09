@@ -7,9 +7,56 @@
     <title>quiz tab</title>
     <link rel="stylesheet" href="style.css">
     <script src="jquery.js"></script>
-    <script src="index.js"></script>
+    <script src="system.js"></script>
 </head>
 <body>
-
+    <!--Modal start-->
+    <div class="modal closed" id="modal" style="display: none;">
+        <div class="content">
+            <div class="headerModal">
+                <h1>Congrats!</h1>
+            </div>
+            <div class="mainModal">
+                <h3>Felicitari! Ai un scor de <span class="value"></span></h3>
+                <div class="stars">
+                    <img src="projImgs/Star.png" alt="star1" id="star1">
+                    <img src="projImgs/Star.png" alt="star2" id="star2">
+                    <img src="projImgs/Star.png" alt="star3" id="star3">
+                    <img src="projImgs/Star.png" alt="star4" id="star4">
+                    <img src="projImgs/Star.png" alt="star5" id="star5">
+                </div>
+            </div>
+            <div class="footerModal">
+                <button id="switch">Next Question</button> 
+            </div>
+        </div>
+    </div> 
+    <!--Modal end-->
+    <div class="header">
+        <div class="closeButtonWrapper"
+             onclick="BtnClose();"></div>
+        <div class="ProgressBar">
+            <div class="fill" id="progress">
+                
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="turtle"></div>
+        <div class="content">
+            <div class="questionWrapper">
+                <p>Acesta este un model de intrebare?</p>
+            </div>
+            <div class="AnswerButtonWrapper">
+                <button>Raspuns</button>
+                <button>Raspuns</button>
+                <button>Raspuns</button>
+                <button>Raspuns</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        Ai intampinat probleme? <b>Contacteaza-ne</b>
+    </div>
 </body>
 </html>

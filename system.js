@@ -5,10 +5,12 @@
 */
 
 // get the quiz selection, or default if not specified
-var quiz_uri = '/quizzes/' + (getParameterByName("quiz") ?? "default").trim() + '.json';
+var quiz_uri = 'quizzes/' + (getParameterByName("quiz") ?? "default").trim() + '.json';
 
-// getting querystring parameters
+//getting querystring parameters
 // copied from stackoverflow.com/a/901144
+// not using for now
+
 function getParameterByName(name, url = window.location.href) {
     name = name.replace(/[\[\]]/g, '\\$&');
     var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
@@ -26,7 +28,7 @@ let correctGuesses = 0;
 
 //redirect to home on close
 function BtnClose() {
-    window.open("list.html", '_parent');
+    window.open("../index.html", '_parent');
 } 
 //close modal function
 function close_modal() {
@@ -108,7 +110,7 @@ addEventListener('DOMContentLoaded', (e) => {
     })
 
     //click sound effect 
-    let audio = new Audio('/audios/fancyclick.wav')
+    let audio = new Audio('audios/fancyclick.wav')
     let buttons = document.querySelectorAll('div.main div.content div.AnswerButtonWrapper button');
     for (button of buttons) {
         button.addEventListener('click', (e) => {
@@ -244,13 +246,13 @@ function checkanswers(correct, index, e) {
             return; 
         } else if (correctanswers > 2 && correctanswers <= 5) {
             open_modal(
-                "Congrats!",
+                "Felicitari!",
                 correctanswers,
-                "You’ve managed to complete this quiz with a score of",
+                "Ai completat acest quiz cu un scor de",
                 function () {
-                    window.open('list.html', '_blank')
+                    window.open('http://127.0.0.1:5501/index.html', '_blank')
                 },
-                'Awesome'
+                'Continua'
             )
             correctGuesses += 100/questions.length
             setProgress(correctGuesses)
@@ -260,12 +262,12 @@ function checkanswers(correct, index, e) {
         open_modal(
             "Correct!",
             0,//stars
-            "Awesome! You got this one correct. Great job!", 
+            "Super, ai raspuns corect!!", 
             function () {
                 switch_question();
                 close_modal(); 
             },
-            "Next question" 
+            "Continua" 
         );
         correctGuesses += 100/questions.length
         setProgress(correctGuesses);
@@ -274,13 +276,13 @@ function checkanswers(correct, index, e) {
     } else if (correct==false){
         //if it's incorrect
         open_modal(
-            "Wrong!",
+            "Gresit!",
             0,//stars
-            "Seems like you didn't answered correctly. No worries, you can always try again!", 
+            "Se pare ca nu ai reusit, incearca din nou!", 
             function () {
                 close_modal() 
             },
-            "Try again"
+            "Incearca"
         );
         //decrement the x variable
         if (!answer_has_been_decremented) {
