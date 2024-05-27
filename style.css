@@ -248,7 +248,9 @@ body {
 /* RESPONSIVE THINGY */
 
                 @media (max-width: 870px) {
-
+                    body > div.main > div.turtle {
+                        opacity: 0;
+                    }
                     body > div.main > div.content > div.AnswerButtonWrapper {
                         width: 90vw;
                     }

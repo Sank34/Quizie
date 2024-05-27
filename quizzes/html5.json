@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "text": "In ce grupa se afla elementul Ca?", 
+      "correct_answer": "II", 
+      "wrong_answers": [
+        "IV", "III", "I"
+      ] 
+    },
+    {
+      "text": "In reactia 2H2O --> 2OH + H2^ reactantul este...", 
+      "correct_answer": "H2O", 
+      "wrong_answers": [
+        "OH + H2", "H2", "OH"
+      ] 
+    },
+    {
+      "text": "Calculati C% daca md = 30g, iar ms = 60g", 
+      "correct_answer": "C = 50%", 
+      "wrong_answers": [
+        "C = 10% ", "C = 100%", "C = 0%"
+      ] 
+    },
+    {
+      "text": "Ce rezulta din reactia K + H2O?", 
+      "correct_answer": "KHO + O2", 
+      "wrong_answers": [
+        "HK + O2 ", "KO + H2", "KH2O + K"
+      ] 
+    },
+    {
+      "text": "Care este formula volumului unei substante", 
+      "correct_answer": "V = Nv * Vo ", 
+      "wrong_answers": [
+        "V = m * Nv", "V = Vo * m", "V = Vo : m"
+      ] 
+    }
+  ]
+}

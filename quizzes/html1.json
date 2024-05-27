@@ -1,0 +1,49 @@
+{
+  "questions": [
+    {
+      "text": "Ce reprezintă termenul de designul web?",
+      "correct_answer": "Realizare site web",
+      "wrong_answers": [
+        "Proces de scriere",
+        "Limbaj de programare",
+        "Format de imagine"
+      ]
+    },
+    {
+      "text": "Ce înseamnă HTML?",
+      "correct_answer": "<Hyper Text Markup Language>",
+      "wrong_answers": [
+        "<Hyperlinks and Text Markup Language>",
+        "<Home Tool Markup Language>",
+        "<Hyperlinks Text Media Language>"
+      ]
+    },
+    {
+      "text": "Cum recunoaștem un fișier HTML?",
+      "correct_answer": "Extensia .html>",
+      "wrong_answers": [
+        "extensia .htx",
+        "extensia .ht",
+        "extensia .hml"
+      ]
+    },
+    {
+      "text": "Care dintre următoarele afirmații este adevărată despre HTML?",
+      "correct_answer": "limbaj markup",
+      "wrong_answers": [
+        "limbaj de programare",
+        "editor de text",
+        "limbaj de stilizare"
+      ]
+    },
+    {
+      "text": "Cu ce fel de editori de text poate fi creat HTML?",
+      "correct_answer": "VSC, Atom",
+      "wrong_answers": [
+        "Excel",
+        "WordPad>",
+        "Photoshop"
+      ]
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 /* TO DO LIST
-    -bug with calculating the points
+    -bug with calculating the points -> if the user has 0 points, it will display 0/5 stars
     -list.html
     -responsive phone bug with the text
 */
@@ -260,7 +260,7 @@ function checkanswers(correct, index, e) {
     } else if (correct==true && index!=questions.length-1) {
         // right answer & not the last one
         open_modal(
-            "Correct!",
+            "Corect!",
             0,//stars
             "Super, ai raspuns corect!!", 
             function () {
