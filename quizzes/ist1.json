@@ -1,0 +1,49 @@
+{
+    "questions": [
+        {
+          "text": "Care a fost unul dintre principalele motive ale nemulțumirii coloniștilor față de britanici?",
+          "correct_answer": "Taxele impuse fără reprezentare",
+          "wrong_answers": [
+            "Interzicerea agriculturii",
+            "Lipsa religiei",
+            "Prea multe alegeri"
+          ]
+        },
+        {
+          "text": "Ce lege impunea taxe pe documentele oficiale și ziare?",
+          "correct_answer": "Legea Timbrelor",
+          "wrong_answers": [
+            "Legea Ceaiului",
+            "Legea Bostonului",
+            "Legea Comerțului"
+          ]
+        },
+        {
+          "text": "Ce eveniment din 1773 a fost un protest împotriva taxei pe ceai?",
+          "correct_answer": "Boston Tea Party",
+          "wrong_answers": [
+            "Revolta Ceaiului",
+            "Protestul din New York",
+            "Lupta de la Concord"
+          ]
+        },
+        {
+          "text": "Ce filozof a influențat ideea că guvernul trebuie să protejeze drepturile naturale?",
+          "correct_answer": "John Locke",
+          "wrong_answers": [
+            "Voltaire",
+            "Karl Marx",
+            "Platon"
+          ]
+        },
+        {
+          "text": "Ce principiu susținea Montesquieu pentru organizarea guvernului?",
+          "correct_answer": "Separarea puterilor",
+          "wrong_answers": [
+            "Monarhie absolută",
+            "Puterea divină a regelui",
+            "Regimul militar"
+          ]
+        }
+    ]
+}

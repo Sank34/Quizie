@@ -1,0 +1,49 @@
+{
+    "questions": [
+        {
+          "text": "În ce an au avut loc primele lupte ale Revoluției Americane?",
+          "correct_answer": "1775",
+          "wrong_answers": [
+            "1765",
+            "1781",
+            "1793"
+          ]
+        },
+        {
+          "text": "Ce document a oficializat separarea coloniilor de Marea Britanie?",
+          "correct_answer": "Declarația de Independență",
+          "wrong_answers": [
+            "Tratatul de la Paris",
+            "Constituția SUA",
+            "Carta Drepturilor"
+          ]
+        },
+        {
+          "text": "Care a fost bătălia considerată punctul de cotitură al războiului?",
+          "correct_answer": "Bătălia de la Saratoga",
+          "wrong_answers": [
+            "Bătălia de la Yorktown",
+            "Bătălia de la Bunker Hill",
+            "Bătălia de la Lexington"
+          ]
+        },
+        {
+          "text": "Ce țară europeană a ajutat coloniile americane în război?",
+          "correct_answer": "Franța",
+          "wrong_answers": [
+            "Spania",
+            "Germania",
+            "Italia"
+          ]
+        },
+        {
+          "text": "Ce general a condus armata americană în Revoluție?",
+          "correct_answer": "George Washington",
+          "wrong_answers": [
+            "Thomas Jefferson",
+            "Benjamin Franklin",
+            "John Adams"
+          ]
+        }
+      ]
+    }

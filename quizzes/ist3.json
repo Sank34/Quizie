@@ -1,0 +1,49 @@
+{
+    "questions": [
+        {
+          "text": "Prin ce tratat Marea Britanie a recunoscut independența SUA?",
+          "correct_answer": "Tratatul de la Paris (1783)",
+          "wrong_answers": [
+            "Tratatul de la Versailles",
+            "Tratatul de la Londra",
+            "Declarația Drepturilor Omului"
+          ]
+        },
+        {
+          "text": "Ce tip de guvern a fost adoptat după Revoluție?",
+          "correct_answer": "Republică democratică",
+          "wrong_answers": [
+            "Monarhie constituțională",
+            "Dictatură militară",
+            "Oligarhie aristocratică"
+          ]
+        },
+        {
+          "text": "Ce document fundamental a fost adoptat în 1787?",
+          "correct_answer": "Constituția SUA",
+          "wrong_answers": [
+            "Declarația de Independență",
+            "Carta Atlanticului",
+            "Magna Carta"
+          ]
+        },
+        {
+          "text": "Cine a fost primul președinte al SUA?",
+          "correct_answer": "George Washington",
+          "wrong_answers": [
+            "Thomas Jefferson",
+            "Alexander Hamilton",
+            "John Adams"
+          ]
+        },
+        {
+          "text": "Ce revoluție europeană a fost influențată de Revoluția Americană?",
+          "correct_answer": "Revoluția Franceză",
+          "wrong_answers": [
+            "Revoluția Industrială",
+            "Revoluția Rusă",
+            "Unificarea Germaniei"
+          ]
+        }
+      ]
+    }
