@@ -1,0 +1,49 @@
+{
+    "questions": [
+        {
+          "text": "Cate colonii americane existau atunci?",
+          "correct_answer": "13",
+          "wrong_answers": [
+            "12",
+            "14",
+            "15"
+          ]
+        },
+        {
+          "text": "De ce au fost impuse taxe pentru coloniile americane?",
+          "correct_answer": "Plata datoriilor",
+          "wrong_answers": [
+            "Dezvoltarea armatei",
+            "Criza economica",
+            "Vor multi bani"
+          ]
+        },
+        {
+          "text": "Cum se denumea legea care permitea doar Campaniei Britanice a Indiilor de Est sa vanda ceai?",
+          "correct_answer": "Legea ceaiului",
+          "wrong_answers": [
+            "Legea Timbrelor",
+            "Legea Bostonului",
+            "Legea Comerțului"
+          ]
+        },
+        {
+          "text": "Cine sustinea contractul social(ca guvernul trebuie sa serveasca vointa poporului)?",
+          "correct_answer": "Jean Jaques",
+          "wrong_answers": [
+            "Voltaire",
+            "Montesquieu",
+            "Platon"
+          ]
+        },
+        {
+          "text": "Ce principiu susținea Montesquieu pentru organizarea guvernului?",
+          "correct_answer": "Separarea puterilor",
+          "wrong_answers": [
+            "Monarhie absolută",
+            "Puterea divină a regelui",
+            "Regimul militar"
+          ]
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "questions": [
+        {
+          "text": "In ce an au semnat colonistii Declaratia de Independenta?",
+          "correct_answer": "1776",
+          "wrong_answers": [
+            "1775",
+            "1777",
+            "1783"
+          ]
+        },
+        {
+          "text": "Cand a recunoscut Marea Britane independenta Statelor Unite?",
+          "correct_answer": "1783",
+          "wrong_answers": [
+            "1781",
+            "1785",
+            "1787"
+          ]
+        },
+        {
+          "text": "Cand a fost facut documentul fundamental denumit Constitutia SUA?",
+          "correct_answer": "1787",
+          "wrong_answers": [
+            "1776",
+            "1781",
+            "1789"
+          ]
+        },
+        {
+          "text": "Cine a fost primul președinte al SUA?",
+          "correct_answer": "George Washington",
+          "wrong_answers": [
+            "Thomas Jefferson",
+            "Alexander Hamilton",
+            "John Adams"
+          ]
+        },
+        {
+          "text": "A fost aceasta revolutie nesemnificativa pentru alte popare?",
+          "correct_answer": "Nu",
+          "wrong_answers": [
+            "Da",
+            "Poate",
+            "Nu stiu"
+          ]
+        }
+      ]
+    }

@@ -233,13 +233,13 @@ function checkanswers(correct, index, e) {
         }
         if (correctanswers <= 2) {
             open_modal(
-                "Sadly..",
+                "Din pacate..",
                 correctanswers,
-                `You got just ${correctanswers} out of 5..Maybe try again?`,
+                `Ai obtinut doar ${correctanswers} din 5..Poate incerci din nou?`,
                 function () {
                     window.location.reload();
                 },
-                'Try again' //add another button in the future that returns to the main page
+                'Incearca din nou' //add another button in the future that returns to the main page
             );
             correctGuesses += 100/questions.length
             setProgress(correctGuesses)

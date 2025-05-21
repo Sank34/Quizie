@@ -1,0 +1,49 @@
+{
+    "questions": [
+        {
+          "text": "Cum s-a numit batalia din 1775, unde fortele coloniale si-au aratat rezistenta? Bătălia de la...",
+          "correct_answer": "Bunker Hill",
+          "wrong_answers": [
+            "Lexington",
+            "Saragota",
+            "Yorktown"
+          ]
+        },
+        {
+          "text": "In ce an a avut loc batalia care a marcat inceputul razboiului dintre colonii si Imperiul Britanic?",
+          "correct_answer": "1775",
+          "wrong_answers": [
+            "1776",
+            "1774",
+            "1777"
+          ]
+        },
+        {
+          "text": "Care a fost bătălia considerată punctul de cotitură al războiului?",
+          "correct_answer": "Bătălia de la Saratoga",
+          "wrong_answers": [
+            "Bătălia de la Yorktown",
+            "Bătălia de la Bunker Hill",
+            "Bătălia de la Lexington"
+          ]
+        },
+        {
+          "text": "Care batalie a avut o importanta  dubla?",
+          "correct_answer": "Saragota",
+          "wrong_answers": [
+            "Lexington",
+            "Bunker Hill",
+            "Yorktown"
+          ]
+        },
+        {
+          "text": "Intre ce ani a avut loc Razboiul pentru independenta?",
+          "correct_answer": "1775-1783",
+          "wrong_answers": [
+            "1776-1781",
+            "1774-1780",
+            "1777-1782"
+          ]
+        }
+      ]
+    }
